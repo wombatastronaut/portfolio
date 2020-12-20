@@ -1,0 +1,77 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(38px + (65 - 38) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: 0.15rem;
+}
+
+h2 {
+    font-size: calc(25px + (30 - 25) * ((100vw - 300px) / (1600 - 300)));
+}
+
+nav ul > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.hero {
+    background: url(./assets/images/hero-cover.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.hero .bg-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero .greetings {
+    font-size: 20px;
+}
+
+.hero .titles {
+    font-size: 22px;
+}
+
+form[name=enquiry] {
+    max-width: 1000px;
+}
+
+form[name=enquiry] input,
+form[name=enquiry] textarea {
+    border: 1px solid;
+}
+
+form[name=enquiry] button[type=submit] {
+    background-color: #1F1F1F;
+}
+
+.about {
+    padding: 12rem 2.5rem;
+}
+
+.contact ul > li {
+    text-align: center;
+}
+
+.contact ul > li .icon-container {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+/*** Footer ***/
+
+footer {
+    background-color: #1F1F1F;
+}
+
+/*** End of Footer ***/
+
+/*** Responsive ***/
+
+
+
+/*** End of Responsive ***/

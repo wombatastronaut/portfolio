@@ -6,7 +6,7 @@ import About from './About'
 import Skills from './Skills'
 import Experience from './Experience'
 import Portfolio from './Portfolio'
-import Contact from './Contact'
+import Contact from './contact'
 import Footer from './Footer'
 
 class Main extends Component {

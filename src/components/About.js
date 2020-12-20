@@ -7,7 +7,7 @@ class About extends Component {
 
     render () {
         return (
-            <section className="about">
+            <section id="about" className="about">
                 <div className="container mx-auto grid grid-cols-3 gap-10">
                     <img src="https://via.placeholder.com/400" alt="Me" />
                     <article className="col-span-2">

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 
+import ContactForm from './ContactForm'
+
 class Contact extends Component {
     constructor (props) {
-		super(props)
+        super(props)
     }
 
     render () {
         return (
-            <section className="contact py-5 px-10">
+            <section id="contact" className="contact py-5 px-10">
                 <div className="container mx-auto flex flex-col justify-center items-center">
                     <h2 className="text-center mb-5 font-medium">Let's Talk</h2>
                     
@@ -32,27 +34,7 @@ class Contact extends Component {
                         </li>
                     </ul>
                     
-                    <form name="enquiry" className="w-full grid grid-cols-2 grid-rows-3 gap-5">
-                        <div>
-                            <input type="text" name="name" className="p-3 w-full rounded-sm " placeholder="Your Name" />
-                        </div>
-                        
-                        <div className="row-span-3">
-                            <textarea name="message" className="p-3 w-full rounded-sm" cols="30" rows="8" placeholder="Your Message"></textarea>
-                        </div>
-
-                        <div>
-                            <input type="email" name="email" className="p-3 w-full rounded-sm " placeholder="Your Email" />
-                        </div>
-
-                        <div>
-                            <input type="phone" name="phone" className="p-3 w-full rounded-sm " placeholder="Your Phone" />
-                        </div>
-
-                        <div className="col-start-2 flex justify-end">
-                            <button className="rounded-sm py-3 px-8 text-white font-semibold uppercase" type="submit">Send</button>
-                        </div>
-                    </form>
+                    <ContactForm />
                 </div>
             </section>
         )

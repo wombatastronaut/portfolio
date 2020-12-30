@@ -17,6 +17,19 @@ class Hero extends Component {
                         <span className="titles text-white font-semibold">Software Engineer | Hacker</span>
                     </div>
                 </div>
+
+                <ul className="social-links absolute bottom-0 mb-6 w-full flex justify-center gap-5">
+                    <li>
+                        <a href="https://github.com/wombatastronaut" className="inline-block p-3" target="_blank">
+                            <i className="lni lni-github text-white"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/ronniel-sembrano" className="inline-block p-3" target="_blank">
+                            <i className="lni lni-linkedin text-white"></i>
+                        </a>
+                    </li>
+                </ul>
 		    </section>
         )
     }

@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 import Header from './Header'
-import Hero from './Hero'
-import About from './About'
-import Skills from './Skills'
-import Experience from './Experience'
-import Portfolio from './Portfolio'
-import Contact from './contact'
+import Home from './home'
+import Blogs from './Blogs'
 import Footer from './Footer'
+import ScrollToTop from './ScrollToTop'
 
 class Main extends Component {
     constructor (props) {
-		super(props)
+        super(props)
     }
 
     render () {
@@ -19,14 +17,13 @@ class Main extends Component {
             <div>
                 <Header />
                 <main>
-                    <Hero />
-                    <About />
-                    <Skills />
-                    <Experience />
-                    <Portfolio />
-                    <Contact />
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route path='/blogs' component={Blogs} />
+                    </Switch>
                 </main>
                 <Footer />
+                <ScrollToTop />
             </div>
         )
     }

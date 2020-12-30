@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import './assets/css/linearicons.css'
-import './App.css'
+import './App.scss'
 
 import Main from './components/Main'
 
@@ -12,7 +13,9 @@ class App extends Component {
 
     render () {
         return (
-            <Main />
+            <Router>
+                <Main />
+            </Router>
         )
     }
 }

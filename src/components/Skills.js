@@ -1,20 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Skills extends Component {
-    constructor (props) {
-		super(props);
-    }
+import ProgressBar from './ProgressBar'
 
-    render () {
-        return (
-            <section id="skills" className="skills py-5 px-10">
-                <div className="container mx-auto">
-                    <h2 className="text-center mb-5 font-medium">Skills</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel consequat turpis. Nunc in libero at dolor ultrices mattis et quis nisi. Vestibulum nunc augue, tempor id convallis ut, interdum quis sapien. Sed convallis ligula laoreet bibendum sagittis. Etiam aliquet odio felis, laoreet suscipit erat vehicula nec. Vivamus tempor faucibus eleifend. Phasellus maximus posuere tellus, non sagittis erat egestas eget. Etiam bibendum facilisis tincidunt. Integer ullamcorper ultricies mi, id facilisis tortor aliquam in. Donec vulputate lectus vel turpis tempus pellentesque. Donec iaculis vitae velit vel dictum. Ut semper est et leo pretium, non varius felis pharetra. Curabitur orci lorem, aliquam at dui nec, ultricies interdum sapien.</p>
-                </div>
-		    </section>
-        )
-    }
+function Skills () {
+    return (
+        <section id="skills" className="skills py-5 px-10">
+            <div className="container mx-auto">
+                <h2 className="text-center mb-10 font-medium">Skills</h2>
+                <ProgressBar label="HTML5" value="8" max="10" />
+                <ProgressBar label="CSS" value="9" max="10" />
+                <ProgressBar label="VueJS" value="8" max="10" />
+                <ProgressBar label="ReactJS" value="6" max="10" />
+                <ProgressBar label="PHP(Laravel, Wordpress, CodeIgniter)" value="8" max="10" />
+            </div>
+        </section>
+    )
 }
 
 export default Skills

@@ -11,7 +11,7 @@ class Contact extends Component {
         return (
             <section id="contact" className="contact py-5 px-10">
                 <div className="container mx-auto flex flex-col justify-center items-center">
-                    <h2 className="text-center mb-5 font-medium">Let's Talk</h2>
+                    <h2 className="text-center mb-10 font-medium">Let's Talk</h2>
                     
                     <ul className="w-full grid grid-cols-3 mb-20">
                         <li>

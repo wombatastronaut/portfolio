@@ -9,9 +9,9 @@ class Footer extends Component {
         const currentYear = new Date().getFullYear()
 
         return (
-            <footer className="py-5 px-10 text-white">
+            <footer>
                 <div className="container mx-auto flex justify-center items-center">
-                    <p>© { currentYear } <span>Ronniel</span>. All Rights Reserved.</p>
+                    <p className="text-white">© { currentYear } <span>Ronniel</span>. All Rights Reserved.</p>
                 </div>
             </footer>
         )

@@ -1,46 +1,40 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 
-class ScrollToTop extends Component {
-    constructor (props) {
-        super(props)
-        
-        this.scrollToTop = this.scrollToTop.bind(this)
-    }
+function ScrollToTop () {
+    const [display, setDisplay] = useState(0)
 
-    componentDidMount () {
-        window.addEventListener('scroll', this.scroll, true);
-    }
+    useEffect(() => {
+        window.addEventListener('scroll', scroll, true)
+    })
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.scroll);
-    }
-
-    scroll () {
+    const scroll = () => {
         const currentYOffset = window.pageYOffset
 
         if (currentYOffset > 0) {
-            console.log('show')
+            setDisplay(1)
         } else {
-            console.log('hide')
+            setDisplay(0)
         }
     }
 
-    scrollToTop () {
+    const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         })
     }
 
-    render () {
-        return (
-            <div className="scroll-to-top">
-                <button className="px-4 py-3" onClick={this.scrollToTop}>
-                    <i className="lni lni-chevron-up text-white"></i>
-                </button>
-            </div>
-        )
+    if (!display) {
+        return (null)
     }
+
+    return (
+        <div className="scroll-to-top">
+            <button className="px-4 py-3" onClick={scrollToTop}>
+                <i className="lni lni-chevron-up text-white"></i>
+            </button>
+        </div>
+    )
 }
 
 export default ScrollToTop

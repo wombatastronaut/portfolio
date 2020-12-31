@@ -8,23 +8,20 @@ $overlay-color: rgba(0, 0, 0, 0.6);
         background: $overlay-color;
     }
 
-    .greetings {
-        font-size: 20px;
-    }
-
-    .titles {
-        font-size: 22px;
-    }
-
     .social-links a {
         background: $overlay-color;
         border: 1px solid #FFFFFF;
         border-radius: 50px;
 
         i {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
         }
-    }  
+    }
+    
+    button {
+        border: 1px solid #FFFFFF;
+        background: $overlay-color;
+    }
 }
 
 form[name=enquiry] {

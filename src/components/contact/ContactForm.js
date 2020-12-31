@@ -21,11 +21,11 @@ class ContactForm extends Component {
                 </div>
 
                 <div>
-                    <input type="phone" name="phone" className="p-3 w-full rounded-sm " placeholder="Your Phone" />
+                    <input type="text" name="subject" className="p-3 w-full rounded-sm " placeholder="Your Subject" />
                 </div>
 
                 <div className="col-start-2 flex justify-end">
-                    <button className="rounded-sm py-3 px-8 text-white font-semibold uppercase" type="submit">Send</button>
+                    <button className="py-3 px-8 text-white font-semibold" type="submit">Send</button>
                 </div>
             </form>
         )

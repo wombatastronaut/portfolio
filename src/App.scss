@@ -14,8 +14,26 @@ h2 {
 /*** Header ***/
 
 nav ul > li > a {
+    position: relative;
     font-size: 16px;
+
+    &::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid #FFFFFF;
+        width: 0;
+        position: absolute;
+        right: 0;
+        margin-top: 0.5rem;
+        -webkit-transition: 0.25s ease;
+        transition: 0.25s ease;
+    }
+
+    &:hover::after {
+        width: 100%; 
+    }
 }
+
 
 /*** End of Header ***/
 
@@ -24,9 +42,8 @@ nav ul > li > a {
         content: '';
         position: absolute;
         top: 0;
-        bottom: 23px;
+        bottom: 0;
         left: 50%;
-        height: 99.5%;
         width: 4px;
         opacity: 0.3;
         background: #48695E;
@@ -50,13 +67,14 @@ nav ul > li > a {
         }
 
         &:nth-child(even) .timeline-content::before  {
-            left: 52%;
+            left: auto;
+            right: 44%;
         }
 
-        &:nth-child(even) .card {
+        &:nth-child(even) .timeline-content .card {
             grid-column-start: 2;
-            padding-left: 5rem;
-            padding-right: 0;
+            margin-left: 4.75rem;
+            margin-right: 0;
         }
 
         .timeline-content {
@@ -71,6 +89,7 @@ nav ul > li > a {
                 position: absolute;
                 top: 26px;
                 left: 44%;
+                right: auto;
                 z-index: -2;
                 opacity: 0.4;
                 background: #48695E;
@@ -79,6 +98,12 @@ nav ul > li > a {
             &::after {
                 clear: both;
                 content: '';
+            }
+
+            .card {
+                border: 1px solid;
+                padding: 1.5rem;
+                margin-right: 4.75rem;
             }
         }
     }
@@ -99,10 +124,34 @@ nav ul > li > a {
     }
 }
 
+.progress-bar-container {
+    .progress-bar-outline {
+        display: flex;
+        overflow: hidden;
+        height: 0.5rem;
+        line-height: 0;
+        background-color: #E9ECEF;
+    }
+
+    .progress-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #00C896;
+        color: #FFFFFF;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-transition: 1.25s ease;
+        transition: width 1.25s ease;
+    }
+}
+
 /*** Footer ***/
 
 footer {
     background-color: #1F1F1F;
+    padding: 1.75rem;
 }
 
 /*** End of Footer ***/

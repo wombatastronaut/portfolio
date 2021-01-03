@@ -24,30 +24,82 @@ $overlay-color: rgba(0, 0, 0, 0.6);
     }
 }
 
-form[name=enquiry] {
-    max-width: 1000px;
+.skills {
+    .container > div {
+        background-color: #161616;
+    }
 
-    input,
-    textarea {
-        border: 1px solid;
+    .progress-bar-container {
+        margin-bottom: 1rem;
     }
-    
-    button[type=submit] {
-        background-color: #1F1F1F;
+
+    .progress-bar-label {
+        margin-bottom: 0.5rem;
     }
+}
+
+.experience-item {
+    background-color: #161616;
+    border-left: 2px solid transparent;
+    border-left-color: #009E66;
+
+    .experience-item-arrow::after, .experience-item-arrow::before {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    .experience-item-arrow::after {
+        left: 16px;
+        border: 8px solid transparent;
+        border-left-color: #009E66;
+    }
+
+    .experience-item-arrow::before {
+        width: 16px;
+        height: 16px;
+        left: 0;
+        background-color: #009E66;
+    }
+
+    .experience-item-details, p {
+        color: #9F9F9F;
+    }
+}
+
+.experience-item:not(:last-child) {
+    border-bottom: 1px solid #313131;
 }
 
 .about {
-    padding: 12rem 2.5rem;
+    .container > div {
+        background-color: #161616;
+    }
+
+    p {
+        color: #9F9F9F;
+    }
 }
 
-.contact ul > li {
-    text-align: center;
-    
-    .icon-container {
-        display: inline-block;
-        border: 1px solid;
-        border-radius: 50px;
-        padding: 15px;
-    }    
+.contact {
+    .container > div {
+        background-color: #161616;
+    }
+
+    ul > li > div:first-child {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+
+    form {
+        input,
+        textarea {
+            border: 1px solid;
+        }
+        
+        button[type=submit] {
+            border: 1px solid #FFFFFF;
+            background: rgba(0, 0, 0, 0.6);
+        }
+    }
 }

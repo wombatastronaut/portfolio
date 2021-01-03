@@ -7,46 +7,41 @@ class Experience extends Component {
 
     render () {
         return (
-            <section id="experience" className="experience py-5 px-10">
-                <div className="container mx-auto">
-                    <h2 className="text-center mb-10 font-medium">Experience</h2>
+            <section id="experience-and-education" className="experience-and-education py-5 px-10">
+                <div className="container mx-auto grid grid-cols-2 gap-20">
+                    <div id="education" className="education">
+                        <h2 className="text-center mb-10 text-white font-medium">Education</h2>
+
+                        <div className="experience-item relative py-10 px-12">
+                            <span className="experience-item-arrow"></span>
+                            <h4 className="text-xl text-white font-medium mb-2">Bachelor of Science in Information Technology</h4>
+                            <span class="experience-item-details block mb-5 text-white">University of Science and Technology of Southern Philippines / 2011 - 2015</span>
+                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
+                        </div>
+                    </div>
                     
-                    <div className="timeline relative">
-                        <div className="timeline-block">
-                            <div className="timeline-dot">
-                            </div>
-                            <div className="timeline-content">
-                                <div className="card">
-                                    <h6 className="text-2xl font-medium">Software Engineer</h6>
-                                    <span className="block text-lg">Zeald</span>
-                                    <span className="block text-lg mb-5">June 2019 - Present</span>
-                                    <p>I started my frontend carrier here, spent tow years learning and working in various frontend aspects. I worked on about 40+ projects local and online.</p>
-                                </div>
-                            </div>
+                    <div id="experience" className="experience">
+                        <h2 className="text-center mb-10 text-white font-medium">Experience</h2>
+
+                        <div className="experience-item relative py-10 px-12">
+                            <span className="experience-item-arrow"></span>
+                            <h4 className="text-xl text-white font-medium mb-2">Software Engineer</h4>
+                            <span class="experience-item-details block mb-5 text-white">Zeald / June 2019 - Present</span>
+                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
                         </div>
-                        <div className="timeline-block">
-                            <div className="timeline-dot">
-                            </div>
-                            <div className="timeline-content">
-                                <div className="card">
-                                    <h6 className="text-2xl font-medium">Web Developer</h6>
-                                    <span className="block text-lg">Fligno</span>
-                                    <span className="block text-lg mb-5">May 2018 - June 2018</span>
-                                    <p>I started my frontend carrier here, spent tow years learning and working in various frontend aspects. I worked on about 40+ projects local and online.</p>
-                                </div>
-                            </div>
+
+                        <div className="experience-item relative py-10 px-12">
+                            <span className="experience-item-arrow"></span>
+                            <h4 className="text-xl text-white font-medium mb-2">Full Stack Developer</h4>
+                            <span class="experience-item-details block mb-5 text-white">Fligno / May 2018 - June 2019</span>
+                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
                         </div>
-                        <div className="timeline-block">
-                            <div className="timeline-dot">
-                            </div>
-                            <div className="timeline-content">
-                                <div className="card">
-                                    <h6 className="text-2xl font-medium">Web Developer</h6>
-                                    <span className="block text-lg">Syntactics</span>
-                                    <span className="block text-lg mb-5">May 2015 - June 2018</span>
-                                    <p>I started my frontend carrier here, spent tow years learning and working in various frontend aspects. I worked on about 40+ projects local and online.</p>
-                                </div>
-                            </div>
+
+                        <div className="experience-item relative py-10 px-12">
+                            <span className="experience-item-arrow"></span>
+                            <h4 className="text-xl text-white font-medium mb-2">Full Stack Developer</h4>
+                            <span class="experience-item-details block mb-5 text-white">Syntactics, Inc. / May 2015 - May 2018</span>
+                            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.</p>
                         </div>
                     </div>
                 </div>

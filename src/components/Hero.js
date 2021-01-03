@@ -15,14 +15,14 @@ function Hero () {
     }
 
     return (
-        <section className="hero h-screen relative">
+        <section className="hero h-screen relative mb-12">
             <div id="particles-js" className="bg-overlay absolute w-full h-full"></div>
 
             <div className="container mx-auto w-full h-full flex items-center">
                 <div className="z-10">
                     <span className="greetings text-xl text-white font-medium">Hello there, I'm</span>
                     <h1 className="font-black text-white">Ronniel Sembrano</h1>
-                    <span className="titles block text-xl text-white font-semibold mb-10">Software Engineer | Full-stack Developer</span>
+                    <span className="titles block text-xl text-white font-semibold mb-10">Software Engineer | Full Stack Developer</span>
                     <button className="py-3 px-8 text-white font-semibold" onClick={scrollToContact}>Let's Talk</button>
                 </div>
             </div>

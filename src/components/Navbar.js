@@ -29,25 +29,25 @@ class Navbar extends Component {
 
     render () {
         return (        
-            <nav>
+            <nav className="hidden md:block">
                 <ul className="flex gap-8">
                     <li>
-                        <a href="#" className="text-white font-medium" data-target="about" onClick={this.scrollTo}>About</a>
+                        <a href="#" className="relative text-white font-medium" data-target="about" onClick={this.scrollTo}>About</a>
                     </li>
                     <li>
-                        <a href="#" className="text-white font-medium" data-target="skills" onClick={this.scrollTo}>Skills</a>
+                        <a href="#" className="relative text-white font-medium" data-target="skills" onClick={this.scrollTo}>Skills</a>
                     </li>
                     <li>
-                        <a href="#" className="text-white font-medium" data-target="experience" onClick={this.scrollTo}>Experience</a>
+                        <a href="#" className="relative text-white font-medium" data-target="experience-and-education" onClick={this.scrollTo}>Experience</a>
                     </li>
                     <li>
-                        <a href="#" className="text-white font-medium" data-target="portfolio" onClick={this.scrollTo}>Portfolio</a>
+                        <a href="#" className="relative text-white font-medium" data-target="portfolio" onClick={this.scrollTo}>Portfolio</a>
                     </li>
                     <li>
-                        <NavLink className="text-white font-medium" to="/blogs">Blogs</NavLink>
+                        <NavLink className="relative text-white font-medium" to="/blogs">Blogs</NavLink>
                     </li>
                     <li>
-                        <a href="#" className="text-white font-medium" data-target="contact" onClick={this.scrollTo}>Contact</a>
+                        <a href="#" className="relative text-white font-medium" data-target="contact" onClick={this.scrollTo}>Contact</a>
                     </li>
                 </ul>
             </nav>

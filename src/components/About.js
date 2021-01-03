@@ -1,23 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class About extends Component {
-    constructor (props) {
-		super(props)
-    }
-
-    render () {
-        return (
-            <section id="about" className="about">
-                <div className="container mx-auto grid grid-cols-3 gap-10">
+const About = () => {
+    return (
+        <section id="about" className="about py-5 px-10 mb-12">
+            <div className="container mx-auto">
+                <h2 className="text-center mb-10 text-white font-medium">About Me</h2>                
+                <div className="grid grid-cols-3 gap-10 py-16 px-12">
                     <img src="https://via.placeholder.com/400" alt="Me" />
                     <article className="col-span-2">
-                        <h2 className="text-left mb-5 font-medium">About Me</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel consequat turpis. Nunc in libero at dolor ultrices mattis et quis nisi. Vestibulum nunc augue, tempor id convallis ut, interdum quis sapien. Sed convallis ligula laoreet bibendum sagittis. Etiam aliquet odio felis, laoreet suscipit erat vehicula nec. Vivamus tempor faucibus eleifend. Phasellus maximus posuere tellus, non sagittis erat egestas eget. Etiam bibendum facilisis tincidunt. Integer ullamcorper ultricies mi, id facilisis tortor aliquam in. Donec vulputate lectus vel turpis tempus pellentesque. Donec iaculis vitae velit vel dictum. Ut semper est et leo pretium, non varius felis pharetra. Curabitur orci lorem, aliquam at dui nec, ultricies interdum sapien.</p>
+                        <p>
+                            I'm a passionate software engineer based in the Phillipines with 5 years of solid experience.
+                            My expertise is backend development using <span className="text-white">PHP(Laravel, CodeIgniter, Wordpress)</span>, frontend development using <span className="text-white">HTML</span>, <span className="text-white">CSS</span>, <sapn className="text-white">Javascript(VueJS, ReactJS, JQuery, VanillaJS)</sapn>,
+                            database management using <span className="text-white">MySQL</span>. I also know basic server configuration for PHP and JS projects.
+                        </p>
                     </article>
                 </div>
-		    </section>
-        )
-    }
+            </div>
+        </section>
+    )
 }
 
 export default About

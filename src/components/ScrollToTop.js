@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react'
 
-function ScrollToTop () {
+const ScrollToTop = () => {
     const [display, setDisplay] = useState(0)
 
     useEffect(() => {
         window.addEventListener('scroll', scroll, true)
-    })
+
+        return () => {
+            window.removeEventListener('scroll', scroll)
+        }
+    }, [])
 
     const scroll = () => {
         const currentYOffset = window.pageYOffset

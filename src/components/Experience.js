@@ -67,15 +67,15 @@ const Experience = () => {
                 <div id="education" className="education">
                     <h2 className="text-center mb-10 text-white font-medium">Education</h2>
 
-                    {educations.map((education) => (
-                        <ExperienceItem type="education" details={education} />
+                    {educations.map((education, index) => (
+                        <ExperienceItem type="education" details={education} key={index} />
                     ))}
                 </div>
                 
                 <div id="experience" className="experience">
                     <h2 className="text-center mb-10 text-white font-medium">Experience</h2>
-                    {experiences.map((experience) => (
-                        <ExperienceItem type="experience" details={experience} />
+                    {experiences.map((experience, index) => (
+                        <ExperienceItem type="experience" details={experience} key={index} />
                     ))}
                 </div>
             </div>

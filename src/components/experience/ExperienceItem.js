@@ -7,8 +7,8 @@ const Responsibilities = ({responsibilities}) => {
 
     return (
         <ul className="list-disc">
-            {responsibilities.map((responsibility) => (
-                <li className="text-white">{responsibility}</li>
+            {responsibilities.map((responsibility, index) => (
+                <li className="text-white" key={index}>{responsibility}</li>
             ))}
         </ul>
     )

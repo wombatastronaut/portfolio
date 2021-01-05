@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import ImageModal from './ImageModal'
+import GalleryImageModal from './GalleryImageModal'
 
 const Gallery = ({images, columns = 3, gap = 10}) => {
     if (!images) {
@@ -10,6 +10,34 @@ const Gallery = ({images, columns = 3, gap = 10}) => {
     const [selectedImage, setSelectedImage] = useState(null)
 
     const selectImage = (image) => {
+        setSelectedImage(image)
+    }
+
+    const nextImage = () => {
+        const currentIndex = images.findIndex((image) => image.index === selectedImage.index)
+        const nextIndex = currentIndex + 1
+        const image = images.find((image) => image.index === nextIndex)
+
+        if (!image) {
+            const [firstImage] = images
+            setSelectedImage(firstImage)
+            return
+        }
+        
+        setSelectedImage(image)
+    }
+
+    const previousImage = () => {
+        const currentIndex = images.findIndex((image) => image.index === selectedImage.index)
+        const previousIndex = currentIndex - 1
+        const image = images.find((image) => image.index === previousIndex)
+
+        if (!image) {
+            const lastImage = images[images.length - 1]
+            setSelectedImage(lastImage)
+            return
+        }
+
         setSelectedImage(image)
     }
 
@@ -23,7 +51,7 @@ const Gallery = ({images, columns = 3, gap = 10}) => {
                     </div>
                 ))}
                 {selectedImage && (
-                    <ImageModal image={selectedImage} onClose={setSelectedImage} />
+                    <GalleryImageModal image={selectedImage} setSelectedImage={setSelectedImage} nextImage={nextImage} previousImage={previousImage} />
                 )}
             </div>
 

@@ -1,0 +1,67 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _emailjsCom = require('emailjs-com');
+  var _emailjsComDefault = _parcelHelpers.interopDefault(_emailjsCom);
+  var _s = $RefreshSig$();
+  function ContactForm() {
+    _s();
+    const [isLoading, setIsLoading] = _react.useState(false);
+    const submit = e => {
+      e.preventDefault();
+      setIsLoading(true);
+      _emailjsComDefault.default.sendForm('contact_service', 'contact_form', e.target, 'user_hiA8Qbo3l9ynw3mXq7qZ1').then(result => {
+        console.log(result.text);
+        setIsLoading(false);
+      }, error => {
+        console.log(error.text);
+        setIsLoading(false);
+      });
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("form", {
+        name: "enquiry",
+        className: "contact-form w-full max-w-screen-lg grid grid-cols-2 gap-5",
+        onSubmit: submit
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        name: "user_name",
+        className: "p-3 w-full rounded-sm",
+        placeholder: "Your Name"
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "email",
+        name: "user_email",
+        className: "p-3 w-full rounded-sm",
+        placeholder: "Your Email"
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col-span-2"
+      }, /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+        name: "message",
+        className: "p-3 w-full rounded-sm",
+        cols: "30",
+        rows: "8",
+        placeholder: "Your Message"
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col-span-2 flex justify-end"
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: 'py-3 px-8 text-white font-semibold' + (isLoading ? ' loading' : ''),
+        type: "submit"
+      }, "Send")))
+    );
+  }
+  _s(ContactForm, "EmvgwIb3cHpoFpeP+WmEDbjx4y4=");
+  _c = ContactForm;
+  exports.default = ContactForm;
+  var _c;
+  $RefreshReg$(_c, "ContactForm");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

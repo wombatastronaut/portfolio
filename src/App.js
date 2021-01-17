@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './assets/css/linearicons.css'
-import './App.scss'
+import './assets/scss/app.scss'
 
 import Main from './components/Main'
 

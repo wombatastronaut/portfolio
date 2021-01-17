@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import Gallery from './shared/Gallery'
+import Gallery from './shared/gallery'
 
 const Portfolio = () => {
     const [projects, setProjects] = useState([])
@@ -56,7 +56,6 @@ const Portfolio = () => {
         <section id="portfolio" className="portfolio py-5 px-10">
             <div className="container mx-auto">
                 <h2 className="text-center mb-10 text-white font-medium">Portfolio</h2>
-
                 <Gallery images={projects} columns="4" gap="8" />
             </div>
         </section>

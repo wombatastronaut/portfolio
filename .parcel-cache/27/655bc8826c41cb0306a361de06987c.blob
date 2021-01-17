@@ -1,0 +1,60 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  const GalleryImageModal = ({image, setSelectedImage, nextImage, previousImage}) => {
+    if (!image) {
+      return null;
+    }
+    const close = e => {
+      e.preventDefault();
+      setSelectedImage(null);
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "modal fixed inset-0 w-full h-full flex flex-col justify-center items-center fade-in"
+      }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        className: "modal-close absolute top-0 right-0 z-10 mt-8 mr-8 cursor-pointer",
+        onClick: close
+      }, /*#__PURE__*/_reactDefault.default.createElement("i", {
+        className: "lni lni-close text-white text-3xl"
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "modal-backdrop fixed inset-0 w-full h-full",
+        onClick: close
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "modal-body z-10"
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        src: image.original,
+        alt: image.title
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "p-3 z-20"
+      }, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: image.link,
+        className: "font-bold text-white"
+      }, image.title))), /*#__PURE__*/_reactDefault.default.createElement("a", {
+        className: "absolute left-0 z-10 ml-8 cursor-pointer",
+        onClick: previousImage
+      }, /*#__PURE__*/_reactDefault.default.createElement("i", {
+        className: "lni lni-chevron-left text-white text-3xl"
+      })), /*#__PURE__*/_reactDefault.default.createElement("a", {
+        className: "absolute right-0 z-10 mr-9 cursor-pointer",
+        onClick: nextImage
+      }, /*#__PURE__*/_reactDefault.default.createElement("i", {
+        className: "lni lni-chevron-right text-white text-3xl"
+      })))
+    );
+  };
+  _c = GalleryImageModal;
+  exports.default = GalleryImageModal;
+  var _c;
+  $RefreshReg$(_c, "GalleryImageModal");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

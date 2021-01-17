@@ -1,0 +1,41 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRouterDom = require('react-router-dom');
+  var _Header = require('./Header');
+  var _HeaderDefault = _parcelHelpers.interopDefault(_Header);
+  var _home = require('./home');
+  var _homeDefault = _parcelHelpers.interopDefault(_home);
+  var _Blogs = require('./Blogs');
+  var _BlogsDefault = _parcelHelpers.interopDefault(_Blogs);
+  var _Footer = require('./Footer');
+  var _FooterDefault = _parcelHelpers.interopDefault(_Footer);
+  var _ScrollToTop = require('./ScrollToTop');
+  var _ScrollToTopDefault = _parcelHelpers.interopDefault(_ScrollToTop);
+  const Main = () => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", null, /*#__PURE__*/_reactDefault.default.createElement(_HeaderDefault.default, null), /*#__PURE__*/_reactDefault.default.createElement("main", null, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/",
+        component: _homeDefault.default
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/blogs",
+        component: _BlogsDefault.default
+      }))), /*#__PURE__*/_reactDefault.default.createElement(_FooterDefault.default, null), /*#__PURE__*/_reactDefault.default.createElement(_ScrollToTopDefault.default, null))
+    );
+  };
+  _c = Main;
+  exports.default = Main;
+  var _c;
+  $RefreshReg$(_c, "Main");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

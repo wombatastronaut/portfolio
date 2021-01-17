@@ -1,0 +1,78 @@
+var helpers = require("../../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _GalleryImageModal = require('./GalleryImageModal');
+  var _GalleryImageModalDefault = _parcelHelpers.interopDefault(_GalleryImageModal);
+  var _s = $RefreshSig$();
+  const Gallery = ({images, columns = 3, gap = 10}) => {
+    _s();
+    if (!images) {
+      return null;
+    }
+    const [selectedImage, setSelectedImage] = _react.useState(null);
+    const selectImage = image => {
+      setSelectedImage(image);
+    };
+    const nextImage = () => {
+      const currentIndex = images.findIndex(image => image.index === selectedImage.index);
+      const nextIndex = currentIndex + 1;
+      const image = images.find(image => image.index === nextIndex);
+      if (!image) {
+        const [firstImage] = images;
+        setSelectedImage(firstImage);
+        return;
+      }
+      setSelectedImage(image);
+    };
+    const previousImage = () => {
+      const currentIndex = images.findIndex(image => image.index === selectedImage.index);
+      const previousIndex = currentIndex - 1;
+      const image = images.find(image => image.index === previousIndex);
+      if (!image) {
+        const lastImage = images[images.length - 1];
+        setSelectedImage(lastImage);
+        return;
+      }
+      setSelectedImage(image);
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "gallery"
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: 'grid ' + 'grid-cols-' + columns + ' gap-' + gap
+      }, images.map((image, index) => /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "cursor-pointer",
+        key: index
+      }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+        className: "mb-3",
+        src: image.thumbnail,
+        alt: image.title,
+        onClick: () => selectImage(image)
+      }), /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: image.link,
+        className: "text-white",
+        target: "_blank"
+      }, image.title))), selectedImage && /*#__PURE__*/_reactDefault.default.createElement(_GalleryImageModalDefault.default, {
+        image: selectedImage,
+        setSelectedImage: setSelectedImage,
+        nextImage: nextImage,
+        previousImage: previousImage
+      })))
+    );
+  };
+  _s(Gallery, "gNHFCSJ3h3sH8HFrpxN7hUqoxHs=");
+  _c = Gallery;
+  exports.default = Gallery;
+  var _c;
+  $RefreshReg$(_c, "Gallery");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

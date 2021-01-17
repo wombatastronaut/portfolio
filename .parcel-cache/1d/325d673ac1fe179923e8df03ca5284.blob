@@ -1,0 +1,37 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  const ProgressBar = ({label, value}) => {
+    if (!value) {
+      return null;
+    }
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "progress-bar-container"
+      }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+        className: "progress-bar-label inline-block my-1"
+      }, label), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "progress-bar-outline"
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "progress-bar",
+        style: {
+          width: value + '%'
+        }
+      })))
+    );
+  };
+  _c = ProgressBar;
+  exports.default = ProgressBar;
+  var _c;
+  $RefreshReg$(_c, "ProgressBar");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

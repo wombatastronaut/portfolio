@@ -1,0 +1,38 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _ContactDetails = require('./ContactDetails');
+  var _ContactDetailsDefault = _parcelHelpers.interopDefault(_ContactDetails);
+  var _ContactForm = require('./ContactForm');
+  var _ContactFormDefault = _parcelHelpers.interopDefault(_ContactForm);
+  const Contact = () => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("section", {
+        id: "contact",
+        className: "contact py-5 px-10 mb-12"
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "container mx-auto flex flex-wrap flex-col justify-center items-center"
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "text-center mb-10 text-white font-medium"
+      }, "Let's Talk"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "flex-grow min-w-full py-16 px-12"
+      }, /*#__PURE__*/_reactDefault.default.createElement(_ContactDetailsDefault.default, null), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "flex justify-center"
+      }, /*#__PURE__*/_reactDefault.default.createElement(_ContactFormDefault.default, null)))))
+    );
+  };
+  _c = Contact;
+  exports.default = Contact;
+  var _c;
+  $RefreshReg$(_c, "Contact");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

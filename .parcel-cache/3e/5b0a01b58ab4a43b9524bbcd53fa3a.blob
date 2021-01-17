@@ -1,0 +1,85 @@
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _ExperienceItem = require('./ExperienceItem');
+  var _ExperienceItemDefault = _parcelHelpers.interopDefault(_ExperienceItem);
+  var _s = $RefreshSig$();
+  const Experience = () => {
+    _s();
+    const [experiences, setExperiences] = _react.useState([]);
+    const [educations, setEducations] = _react.useState([]);
+    _react.useEffect(() => {
+      fetchExperiences();
+      fetchEducations();
+    }, []);
+    const fetchExperiences = () => {
+      const result = [{
+        position: 'Sofware Engineer',
+        company: 'Zeald',
+        period: 'June 2019 - Present',
+        responsibilities: ['Develop new features and fix issues to Zeald\'s e-commerce platform(Perl based)', 'Build custom features for different clients using Zeald\'s e-commerce platform(Perl based)', 'Assist teammates\' about development issues and contribute in improving the team\'s development process']
+      }, {
+        position: 'Full Stack Developer',
+        company: 'Fligno',
+        period: ' May 2018 - June 2019',
+        responsibilities: ['Develop and maintain SaaS applications using Laravel, VueJS and ReactJS', 'Setup web server for Laravel projects using AWS, Apache/Nginx', 'Train team about technologies/practices that will help improve the development process']
+      }, {
+        position: 'Full Stack Developer',
+        company: 'Syntactics',
+        period: 'May 2015 - May 2018',
+        responsibilities: ['Develop and maintain SaaS applications using Laravel, CodeIgniter and VueJS', 'Develop and maintain sites using Wordpress', 'Implement payment gateways like Stripe, Braintree, Fastspring, and Paypal using PHP']
+      }];
+      setExperiences(result);
+    };
+    const fetchEducations = () => {
+      const result = [{
+        course: 'Bachelor of Science in Information Technology',
+        school: 'University of Science and Technology of Southern Philippines',
+        period: '2011 - 2015',
+        description: 'Studied about software, hardware and networking.'
+      }];
+      setEducations(result);
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("section", {
+        id: "experience-and-education",
+        className: "experience-and-education py-5 px-10"
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "container mx-auto grid grid-cols-2 gap-20"
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "education",
+        className: "education"
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "text-center mb-10 text-white font-medium"
+      }, "Education"), educations.map((education, index) => /*#__PURE__*/_reactDefault.default.createElement(_ExperienceItemDefault.default, {
+        type: "education",
+        details: education,
+        key: index
+      }))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "experience",
+        className: "experience"
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "text-center mb-10 text-white font-medium"
+      }, "Experience"), experiences.map((experience, index) => /*#__PURE__*/_reactDefault.default.createElement(_ExperienceItemDefault.default, {
+        type: "experience",
+        details: experience,
+        key: index
+      })))))
+    );
+  };
+  _s(Experience, "clKBT9ZHr07hLG+2015ywA0KSd8=");
+  _c = Experience;
+  exports.default = Experience;
+  var _c;
+  $RefreshReg$(_c, "Experience");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

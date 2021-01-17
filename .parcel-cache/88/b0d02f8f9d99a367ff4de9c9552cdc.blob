@@ -1,0 +1,64 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('react-router-dom');
+  const Navbar = () => {
+    const scrollTo = e => {
+      e.preventDefault();
+      const section = document.getElementById(e.target.dataset.target);
+      if (!section) {
+        return;
+      }
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("nav", {
+        className: "hidden md:block"
+      }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        className: "flex gap-8"
+      }, /*#__PURE__*/_reactDefault.default.createElement("li", null, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: "#",
+        className: "relative text-white font-medium",
+        "data-target": "about",
+        onClick: scrollTo
+      }, "About")), /*#__PURE__*/_reactDefault.default.createElement("li", null, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: "#",
+        className: "relative text-white font-medium",
+        "data-target": "skills",
+        onClick: scrollTo
+      }, "Skills")), /*#__PURE__*/_reactDefault.default.createElement("li", null, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: "#",
+        className: "relative text-white font-medium",
+        "data-target": "experience-and-education",
+        onClick: scrollTo
+      }, "Experience")), /*#__PURE__*/_reactDefault.default.createElement("li", null, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: "#",
+        className: "relative text-white font-medium",
+        "data-target": "portfolio",
+        onClick: scrollTo
+      }, "Portfolio")), /*#__PURE__*/_reactDefault.default.createElement("li", null, /*#__PURE__*/_reactDefault.default.createElement("a", {
+        href: "#",
+        className: "relative text-white font-medium",
+        "data-target": "contact",
+        onClick: scrollTo
+      }, "Contact"))))
+    );
+  };
+  _c = Navbar;
+  exports.default = Navbar;
+  var _c;
+  $RefreshReg$(_c, "Navbar");
+  helpers.postlude(module);
+} finally {
+    window.$RefreshReg$ = prevRefreshReg;
+    window.$RefreshSig$ = prevRefreshSig;
+  }

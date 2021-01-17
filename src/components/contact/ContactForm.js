@@ -1,22 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import emailjs from 'emailjs-com'
 
 function ContactForm () {
+    const [isLoading, setIsLoading] = useState(false)
+
     const submit = (e) => {
         e.preventDefault()
+
+        setIsLoading(true)
+
+        emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_hiA8Qbo3l9ynw3mXq7qZ1')
+            .then((result) => {
+                console.log(result.text)
+                setIsLoading(false)
+            }, (error) => {
+                console.log(error.text)
+                setIsLoading(false)
+            })
     }
 
     return (                    
-        <form name="enquiry" className="w-full max-w-screen-lg grid grid-cols-2 gap-5" onSubmit={submit}>
+        <form name="enquiry" className="contact-form w-full max-w-screen-lg grid grid-cols-2 gap-5" onSubmit={submit}>
             <div>
-                <input type="text" name="name" className="p-3 w-full rounded-sm" placeholder="Your Name" />
+                <input type="text" name="user_name" className="p-3 w-full rounded-sm" placeholder="Your Name" />
             </div>
 
             <div>
-                <input type="email" name="email" className="p-3 w-full rounded-sm" placeholder="Your Email" />
-            </div>
-
-            <div className="col-span-2">
-                <input type="text" name="subject" className="p-3 w-full rounded-sm" placeholder="Your Subject" />
+                <input type="email" name="user_email" className="p-3 w-full rounded-sm" placeholder="Your Email" />
             </div>
 
             <div className="col-span-2">
@@ -24,7 +35,7 @@ function ContactForm () {
             </div>
 
             <div className="col-span-2 flex justify-end">
-                <button className="py-3 px-8 text-white font-semibold" type="submit">Send</button>
+                <button className={'py-3 px-8 text-white font-semibold' + (isLoading ? ' loading' : '')} type="submit">Send</button>
             </div>
         </form>
     )

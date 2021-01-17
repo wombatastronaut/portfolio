@@ -2,13 +2,13 @@ import React from 'react'
 
 const Hero = () => {
     const scrollToContact = () => {
-        const section = document.getElementById('contact')
+        const contactSection = document.getElementById('contact')
 
-        if (!section) {
+        if (!contactSection) {
             return
         }
 
-        section.scrollIntoView({
+        contactSection.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         })

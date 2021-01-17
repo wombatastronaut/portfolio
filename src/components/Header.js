@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header className="absolute top-0 w-full z-10 py-5 px-10">
             <div className="container mx-auto flex justify-between items-center">
-                <NavLink className="text-4xl font-extrabold text-white" to="/">Logo</NavLink>
+                <NavLink className="text-4xl font-extrabold text-white" to="/">RS</NavLink>
                 <Navbar />
             </div>
         </header>

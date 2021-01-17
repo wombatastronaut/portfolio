@@ -30,7 +30,10 @@ Learn More: lineicons.com
   /*------------------------
     font icons
   -------------------------*/
-   
+  .lni-arrow-right::before {
+    content: "\ea1e";
+  }
+
   .lni-close::before {
       content: "\ea63";
   }

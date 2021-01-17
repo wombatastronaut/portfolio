@@ -31,9 +31,9 @@ const Navbar = () => {
                 <li>
                     <a href="#" className="relative text-white font-medium" data-target="portfolio" onClick={scrollTo}>Portfolio</a>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink className="relative text-white font-medium" to="/blogs">Blogs</NavLink>
-                </li>
+                </li> */}
                 <li>
                     <a href="#" className="relative text-white font-medium" data-target="contact" onClick={scrollTo}>Contact</a>
                 </li>

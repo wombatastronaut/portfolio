@@ -20,6 +20,10 @@ $overlay-color: rgba(0, 0, 0, 0.6);
     
     button {
         background: #009E66;
+
+        &:hover {
+            background: #01b676;
+        }
     }
 }
 
@@ -117,6 +121,10 @@ $overlay-color: rgba(0, 0, 0, 0.6);
         
         button[type=submit] {
             background: #009E66;
+
+            &:hover {
+                background: #01b676;
+            }
         }
     }
 }

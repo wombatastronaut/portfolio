@@ -9,7 +9,7 @@ const About = () => {
                     <img src="https://via.placeholder.com/400" alt="Me" />
                     <article className="col-span-2">
                         <p>
-                            I'm a passionate software engineer based in the Phillipines with 5 years of solid experience.
+                            I'm a passionate software engineer based in the Phillipines with almost 6 years of solid experience.
                             My expertise is backend development using <span className="text-white">PHP(Laravel, CodeIgniter, Wordpress)</span>, frontend development using <span className="text-white">HTML</span>, <span className="text-white">CSS</span>, <span className="text-white">Javascript(VueJS, ReactJS, JQuery, VanillaJS)</span>,
                             database management using <span className="text-white">MySQL</span>. I also know basic server configuration for PHP and JS projects.
                         </p>
